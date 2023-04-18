@@ -1,0 +1,38 @@
+Files needed for P32 32 bit pascal compiler (commandline version)
+-----------------------------------------------------------------
+P32     .PAS   Main file, contains parser and calls all other (frontend and
+               backend) routines
+P32_SCAN.PAS   Scanner, this file contains routines that will read the source
+               file and converts the words to tokens.
+P32_PREP.PAS   Preprocessor, handles conditional compiling and compiler
+               directives
+P32_TREE.PAS   Tree routines, this file contains the routines for the parse-
+               tree, the structure in which the program is stored
+P32_SYMB.PAS   Symbol routines, does all symbol handling, removing, adding.
+P32_UNIT.PAS   Unit loader/saver, will load or save the .P32 unit files.
+P32_OPT .PAS   High level optimizer, will initialize a lot of things for the
+               code generator and also performs the dead-code elimination
+P32_CODE.PAS   Code generator, this unit contains the routines that convert
+               the parse tree in assembly code.
+P32_ASM.PAS    Contains all assembly instructions the compiler knows and some
+               routines for finding them, also contains asm-block reader.
+P32_ASML.PAS   Assembly list routines, the code generator stores the assembly
+               code in a list, this unit contains the routines for adding and
+               removing them.
+P32_LOPT.PAS   Low level optimizer, optimize the generated assembly code.
+P32_CFG .PAS   Configuration routines, contains the routines to read P32.INI
+P32_ERR .PAS   Error reporting routines.
+P32_CPUF.PAS   CPU detecting routine.
+
+Addition files for the IDE-version
+----------------------------------
+P32IDE  .PAS   Main file, small unit that does the initializing.
+P32IDEU .PAS   Unit that contains all routines for the IDE to work.
+KEY_UNIT.PAS   Direct keyboard handler.
+MMOUSE  .PAS   Mouse routines
+
+Helper programs
+---------------
+GENDATE .PAS   Creates a file 'DATE.INC' which contains the compilation date.
+SRC2DEF .PAS   Converts .SRC to .DEF files (needed to support different
+               assemblers)

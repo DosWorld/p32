@@ -1,0 +1,33 @@
+#include "windows.h"
+
+#define IDM_ABOUT  1000
+#define IDM_OPEN   1001
+#define IDM_CLOSE  1002
+#define IDM_EXIT   1003
+
+AboutDlg DIALOG 0, 0, 140, 50
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION 
+CAPTION "BFD - GUI version"
+FONT 10, "Arial"
+BEGIN
+    DEFPUSHBUTTON   "&Ok", IDOK, 55, 35, 30, 12
+    CTEXT           "BFD with GUI interface (c)1998", 101, 0, 10, 140, 8
+    CTEXT           "by Leonardo H. Liporati", 102, 0, 20, 140, 8
+END
+
+BFDAppMenu MENU
+BEGIN
+   POPUP "&File"
+   BEGIN
+      MENUITEM "&Open",  IDM_OPEN
+      MENUITEM "&Close", IDM_CLOSE
+      MENUITEM SEPARATOR
+      MENUITEM "&Exit",  IDM_EXIT
+   END
+   POPUP "&Help"
+   BEGIN
+      MENUITEM "&About", IDM_ABOUT
+   END
+END
+
+BFDIcon ICON "WinBFD.ico"

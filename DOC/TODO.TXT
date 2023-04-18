@@ -1,0 +1,65 @@
+Buglist and Todo list
+---------------------
+
+Compiler:
+- Precalculate expressions like: a:=120+10+10+10;
+- Improve support for objects
+- Fix code generation for writeln('');
+- P32 will run out of register with complex expressions
+- Add correct assembler, linker executing
+- Nested WITH's cause problems
+- Add option to unroll loops
+- Add LongBoolean type
+- Add extended FOR loop, floating point counter, step indicator.
+
+RTL (Extended DOS):
+- Add missing functions
+
+
+RTL (Win32):
+
+
+IDE:
+
+- OK buttons should have a focus, so pressing [Enter] is enough to activate
+  them
+- File open/save dialog is missing a 'scroll button'
+- When block-highlight occurs on the first line of the source file it's 
+  disabled
+- ASCII Table has rather silly colours, better use the colour of EditWindow,
+  layout could be better...
+- Add checkmark which indicates if a option is enabled/disabled.
+- Use keyword-structure from P32_SCAN.PAS for keyword highlighting
+
+
+Wishlist
+--------
+
+Compiler:
+
+- Support for sets
+- Support for objects
+- 64 bit integer type
+- LongString type (allowing 4 Gig strings ;) )
+- Include source in the asm source
+- Include comments also in the asm source
+- Partly useless, but rarely useful
+  IfR (exp) then ... (If RARE) 
+  e.g. with {$RARE} {$ENDRARE}
+
+IDE:
+
+- calculator (decimal/binary/hex) with 'insert result' option
+- Option to insert current time/date
+- Some wizards, like:
+  . Source beautifier
+  . Comment remover
+  . Unit creator/updater (add all procedure/function to the interface part)
+  . Insert binary as typed constant
+- INI entry for highlight attributes
+- Support for templates, with one default template.
+- Auto-idention
+- P32 supports nested comments, when nested comments are enabled, the IDE 
+  should color them right.
+- Select target option (maybe even a Add target...with some macro-expansion)
+- Create IDE-options window, where all options (highlighting, etc.) can be set

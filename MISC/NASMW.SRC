@@ -1,0 +1,32 @@
+Netwide Assembler v0.97
+BITS 32
+global _WinMain@16
+
+
+SECTION .text
+SECTION .data
+SECTION .bss
+_WinMain@16
+
+:
+; 
+%macro
+%endm
+ALIGN 16
+%include
+'
+byte 
+word 
+dword 
+qword 
+tword 
+near 
+dword 
+DB
+DQ
+RESB
+
+EXTERN 
+
+GLOBAL
+st#

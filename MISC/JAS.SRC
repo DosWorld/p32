@@ -1,0 +1,33 @@
+Jet Assembler v1.3beta
+.BITS 32
+
+
+
+.SECTION text
+.SECTION data
+.SECTION bss
+MAIN
+
+PROC
+ENDP ;
+.MACRO
+.END
+.ALIGN 4
+.INCLUDE
+'
+byte 
+word 
+dword 
+qword 
+tbyte 
+near
+dword 
+: RESB
+: RESQ
+: RESB
+
+.EXTERN 
+
+.PUBLIC
+st(#)
+

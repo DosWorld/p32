@@ -1,0 +1,106 @@
+History of P32
+--------------
+
+Version 0.5a1 [06 Oct 1998]
+- Assembler parser rewritten
+- Completed support for 'inline' (or macro) procedures/functions
+- Optimized variable pushing
+- Added a lot of lowlevel optimizations
+- The lowlevel optimizer is run by default now
+- Fixed bug in type conversion
+- Fixed serious bug in CASE-statement (Thanks Armin!)
+- Added support for local typed constants
+- Text file I/O is buffered now
+- The heapsize can be specified with the compiler directive {$M <heapsize}
+- You can now use colons in writeln expressions, double colons for floating
+  point numbers is not yet supported
+- Added '-B' to rebuild all source files
+- Nested procedure should work now...
+- Added XOR for boolean expressions
+- Enhanced NASM compatibility
+- Improved the symboltable routines for flexibility, needed for objects
+
+Version 0.5a2 [12 Oct 1998]
+- Fixed bug in WITH-statement
+- Added support for record-type constants
+- Added -Dh option, this enable hints, currently only reports unused global
+  variables.
+- Only used external definitions are emitted now
+- Better local symbol support for units
+
+Version 0.5a3 [12 Oct 1998]
+- Added support for enumerated constants
+- Fixed small bug in unit compilation
+- Fixed bug in comparisons of booleans
+- Added basic support for DB/DW/DD in inline assembler blocks
+- Function results are aligned on the stack
+- Major bug, integer divides containing a multiple of two were incorrectly
+  emitted. Fixed.
+- Fixed destroying of value in EDX by port accesses.
+
+Version 0.5a4 [25 Nov 1998]
+- Added support for typed boolean, pointer and real constants
+- Added stackframe alignment option, for the real speed freaks ;) (use -As)
+- Improved commandline option handling
+- Added commandline option for setting the heapsize
+- Fixed bug in char comparison
+- STRINGS.PAS added, by Pasquale Morvillo, pamorv@freenet.hut.fi
+- Fixed bug in SUCC/PRED functions
+- Optimized code generation for DIV
+- Fixed some bugs in the lowlevel optimizer
+- LENGTH is now an internal function
+
+Version 0.5a5 [11 Jan 1999]
+- Added support for MMX and 3DNow! instructions in the inline assembler.
+- Added MemAvail to system unit
+- Added supported in inline assembler for REP, REPNE, REPE <string opcode>
+  on a single line.
+- Fixed serious bug in DIV code generation
+- Optimized code generation for floating point numbers
+- Improved object support
+- Added support for units that don't have a initialization part
+- Fixed some bugs regarding to PORT arrays
+- Added new option, register shuffling, improves the execution speed on
+  Pentium alike CPUs. (use -Cr at the commandline)
+- Added branch remover, thanks to Pawel Tanski! (Only on CMOV enabled CPU's)
+
+Version 0.5a6 [20 Feb 1999]
+- Fixed bug in floating point code generation
+- Fixed code generator bug in CASE statement
+- Some updates to the branch remover, tnx Pawel
+- Added advanced, direct, pointer definitions, 
+  like: var p    : ^array[0..5] of byte;
+            point: ^record x,y,z: byte; end;
+- Added $IFNDEF compiler directive, thanks to Philip.
+- Added support for include files, through $I <file>, thanks to Philip.
+- Added support for procedural variables
+- Improved the lowlevel optimizer
+- Win32 support is working again
+
+Version 0.5b1 [17 Apr 1999]
+- Completely rewritten the preprocessor, handles $IFDEF, $IFNDEF, $ELSE,
+  $DEFINE, $UNDEF, $IFOPT. Even nesting of ifdef's is possible!
+  Give a big hand to Pedro Gimeno ;)
+- Completely rewritten the comment scanning, it now supports:
+  { }, (* *), /* */, //, --. The comments can be nested and doesn't interfere
+  with eachother... Yet again, many thanks to Pedro!
+- Added ADDR() to the system unit
+- Improved the unit handling and added support for expressions like:
+  <unit>.<identifier>
+- Fixed a big in the floating point code generation
+- Enhanced type checking on procedure calls
+- Fixed small type conversion bug
+- Fixed some bugs related to the use of shuffled registers
+
+Version 0.5b2 [2 Jul 1999]
+- Improved support for objects, added support for 'INHERITED', also fixed
+  the support for inheritance.
+- Changed some keywords to standard directives
+- Added support for register (fastcall) calling conventions, enable it with
+  the procedure directive 'REGISTER'.
+- Fixed bug in ARCTAN function
+- Changed SQRT/SIN/COS/ARCTAN functions to inline functions
+- Enhanced register allocation somewhat
+- Fixed bug with automatic type conversion and parameters for procedures
+- Code generator now outputs hexadecimal numbers, disable it with '-Dd'.
+- Started a new optimizer: common subexpression elimination (CSE)

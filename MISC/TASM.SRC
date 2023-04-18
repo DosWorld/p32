@@ -1,0 +1,32 @@
+Turbo Assembler v3.1 - v5.0
+.586P
+.587
+.MODEL FLAT
+.STACK 0FFFFh
+.CODE
+.DATA
+.DATA?
+MAIN
+END
+PROC
+ENDP
+MACRO
+ENDM
+ALIGN 4
+INCLUDE
+ 
+byte ptr 
+word ptr 
+dword ptr 
+qword ptr 
+tbyte ptr 
+
+offset 
+DB
+DQ
+DB
+DUP(?)
+EXTRN 
+:NEAR
+PUBLIC
+st(#)

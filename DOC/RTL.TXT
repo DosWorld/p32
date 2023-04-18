@@ -1,0 +1,282 @@
+[Copied from Borland Pascal v7.0 help file]
+
+Status overview
+
+ Unit    ณ Status
+อออออออออุอออออออออออออออออออออออออ
+ System  ณ Partially implemented
+ Crt     ณ Fully implemented
+
+
+
+'*' means procedure implemented
+'?' means procedure partially implemented
+
+
+ีอออออออออออออธ
+ณ System Unit ณ
+ิอออออออออออออพ
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Variables (uninitialized)
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Variable  ณ Type             ณ Description
+ อออออออออออุออออออออออออออออออุออออออออออออออออออออออออออออออออออออ
+* Input     ณ Text             ณ Input standard file
+* Output    ณ Text             ณ Output standard file
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Constants (initialized variables)
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+                      ณInitial ณ
+  Variable  ณ Type    ณ Value  ณ Description
+ อออออออออออุอออออออออุออออออออุออออออออออออออออออออออออออออออออออออ
+  CmdLine   ณ PChar   ณ   nil  ณ Command line pointer
+  CmdShow   ณ Integer ณ     0  ณ CmdShow parameter for CreateWindow
+  ErrorAddr ณ Pointer ณ   nil  ณ Run-time error address
+  ExitCode  ณ Integer ณ     0  ณ Exit code
+  ExitProc  ณ Pointer ณ   nil  ณ Exit procedure
+* FileMode  ณ Byte    ณ     2  ณ File open mode
+  HeapBlock ณ Word    ณ  8192  ณ Heap block size
+  HeapError ณ Word    ณ   nil  ณ Heap error function
+  HeapLimit ณ Word    ณ  1024  ณ Heap small block limit
+  HeapList  ณ Word    ณ     0  ณ Heap segment list
+  HInstance ณ Word    ณ     0  ณ Handle of this instance
+  HPrevInst ณ Word    ณ     0  ณ Handle of previous instance
+* InOutRes  ณ Integer ณ     0  ณ I/O result buffer
+  PrefixSeg ณ Word    ณ     0  ณ Program segment prefix (PSP)
+* RandSeed  ณ LongInt ณ     0  ณ Random seed
+ 
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+System Procedures and Functions
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Func/Proc  ณF or Pณ What it does
+ ออออออออออออุออออออุอออออออออออออออออออออออออออออออออออออออออออออออออออออออ
+* Abs        ณ Func ณ Returns the absolute value of the argument
+* Addr       ณ Func ณ Returns the address of a specified object
+? Append     ณ Proc ณ Opens an existing file for appending
+* ArcTan     ณ Func ณ Returns the arctangent of the argument
+? Assign     ณ Proc ณ Assigns the name of an external file to a file
+             ณ      ณ variable
+  Assigned   ณ Func ณ Tests to determine if a pointer or procedural variable
+             ณ      ณ is nil
+* BlockRead  ณ Proc ณ Reads one or more records into a variable
+* BlockWrite ณ Proc ณ Writes one or more records from a variable
+* Break      ณ Proc ณ Terminates a for, while, or repeat statement
+  ChDir      ณ Proc ณ Changes the current directory
+* Chr        ณ Func ณ Returns a character with a specified ordinal number
+* Close      ณ Proc ณ Closes an open file
+* Concat     ณ Func ณ Concatenates a sequence of strings
+* Continue   ณ Proc ณ Continues a for, while, or repeat statement
+* Copy       ณ Func ณ Returns a substring of a string
+* Cos        ณ Func ณ Returns the cosine of the argument (x is an angle, in
+             ณ      ณ radians)
+  CSeg       ณ Func ณ Returns the current value of the CS register
+* Dec        ณ Proc ณ Closes an open file
+* Delete     ณ Proc ณ Deletes a substring from a string
+* Dispose    ณ Proc ณ Disposes of a dynamic variable
+  DSeg       ณ Func ณ Returns the current value of the DS register
+  Eof        ณ Func ณ Returns the end-of-file status
+  Eoln       ณ Func ณ Returns the end-of-line status of a text file
+  Erase      ณ Proc ณ Erases an external file
+* Exit       ณ Proc ณ Exits immediately from the current block
+  Exclude    ณ Proc ณ Excludes an element from a set
+  Exp        ณ Func ณ Returns the exponential of the argument
+* FilePos    ณ Func ณ Returns the current file position of a file
+  FileSize   ณ Func ณ Returns the current size of a file
+* FillChar   ณ Proc ณ Fills a specified number (count) of contiguous bytes
+             ณ      ณ with a specified value (can be type Byte or Char)
+* Flush      ณ Proc ณ Flushes the buffer of a text file open for output
+  Frac       ณ Func ณ Returns the fractional part of the argument
+* FreeMem    ณ Proc ณ Disposes of a dynamic variable of a given size
+  GetDir     ณ Proc ณ Returns the current directory of specified drive
+* GetMem     ณ Proc ณ Creates a dynamic variable of the specified size and
+             ณ      ณ puts the address of the block in a pointer variable
+* Halt       ณ Proc ณ Stops program execution and returns to the operating
+             ณ      ณ system
+* Hi         ณ Func ณ Returns the high-order byte of the argument
+  High       ณ Func ณ Returns the highest value in the range of the argument
+* Inc        ณ Proc ณ Increments a variable
+  Include    ณ Proc ณ Includes an element from a set
+* Insert     ณ Proc ณ Inserts a substring into a string
+  Int        ณ Func ณ Returns the integer part of the argument
+* IOResult   ณ Func ณ Returns the status of the last I/O operation performed
+* Length     ณ Func ณ Returns the dynamic length of a string
+  Ln         ณ Func ณ Returns the natural logarithm of the argument
+* Lo         ณ Func ณ Returns the low-order Byte of the argument
+  Low        ณ Func ณ Returns the lowest value in the range of the argument
+  MaxAvail   ณ Func ณ Returns the size of the largest contiguous free block
+             ณ      ณ in the heap
+  MemAvail   ณ Func ณ Returns the amount of all free memory in the heap
+  MkDir      ณ Proc ณ Creates a subdirectory
+* Move       ณ Proc ณ Copies bytes from source to dest
+  New        ณ Proc ณ Creates a new dynamic variable and sets a pointer
+             ณ      ณ variable to point to it
+* Odd        ณ Func ณ Tests if the argument is an odd number
+  Ofs        ณ Func ณ Tests if the argument is an odd number
+* Ord        ณ Func ณ Returns the ordinal number of an ordinal-type value
+  ParamCount ณ Func ณ Returns the number of parameters passed to the program
+             ณ      ณ on the command line
+  ParamStr   ณ Func ณ Returns a specified command-line parameter
+* Pi         ณ Func ณ Returns the value of Pi
+* Pos        ณ Func ณ Searches for a substring in a string
+* Pred       ณ Func ณ Returns the predecessor of the argument
+  Ptr        ณ Func ณ Converts a segment base and an offset address to a
+             ณ      ณ pointer-type value
+* Random     ณ Func ณ Returns a random number
+* Randomize  ณ Proc ณ Initializes the built-in random number generator with
+             ณ      ณ a random value (obtained from the system clock)
+* Read       ณ Proc ณ For typed files, reads a file component into a
+             ณ      ณ variable.
+             ณ      ณ For text files, reads one or more values into one or
+             ณ      ณ more variables
+* Readln     ณ Proc ณ Executes the Read procedure, then skips to the next
+             ณ      ณ line of the file
+  Rename     ณ Proc ณ Renames an external file
+? Reset      ณ Proc ณ Opens an existing file
+? Rewrite    ณ Proc ณ Creates and opens a new file
+  RmDir      ณ Proc ณ Removes an empty subdirectory
+* Round      ณ Func ณ Rounds a real-type value to an integer-type value
+  RunError   ณ Proc ณ Stops program execution
+  ScrollTo   ณ Proc ณ Scrolls the CRT window to show virtual screen location
+* Seek       ณ Proc ณ Moves the current position of a file to a specified
+             ณ      ณ component
+  SeekEof    ณ Func ณ Returns the end-of-file status of a file
+  SeekEoln   ณ Func ณ Returns the end-of-line status of a file
+  Seg        ณ Func ณ Returns the segment of a specified object
+  SetTextBuf ณ Proc ณ Assigns an I/O buffer to a text file
+* Sin        ณ Func ณ Returns the sine of the argument
+* SizeOf     ณ Func ณ Returns the number of bytes occupied by the argument
+  SPtr       ณ Func ณ Returns the current value of the SP register
+* Sqr        ณ Func ณ Returns the square of the argument
+* Sqrt       ณ Func ณ Returns the square root of the argument
+  SSeg       ณ Func ณ Returns the current value of the SS register
+  Str        ณ Proc ณ Converts a numeric value to a string
+* Succ       ณ Func ณ Returns the successor of the argument
+* Swap       ณ Func ณ Swaps the high- and low-order bytes of the argument
+* Trunc      ณ Func ณ Truncates a real-type value to an integer-type value
+  Truncate   ณ Proc ณ Truncates the file at the current file position
+* UpCase     ณ Func ณ Converts a character to uppercase
+? Val        ณ Proc ณ Converts a string value to its numeric representation
+* Write      ณ Proc ณ For typed files, writes a variable into a file
+             ณ      ณ component
+             ณ      ณ For text files, writes one or more values to the file
+* Writeln    ณ Proc ณ Executes the Write procedure, then outputs an
+             ณ      ณ end-of-line marker to the file
+
+ีออออออออออธ
+ณ Crt Unit ณ
+ิออออออออออพ
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Variables (uninitialized)
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Variable    ณ Type             ณ Description
+ อออออออออออออุออออออออออออออออออุออออออออออออออออออออออออออออออออออออ
+* CheckBreak  ณ Boolean          ณ
+* CheckEOF    ณ Boolean          ณ
+* DirectVideo ณ Boolean          ณ
+* CheckSnow   ณ Boolean          ณ
+* LastMode    ณ Word             ณ
+* TextAttr    ณ Byte             ณ
+* WindMin     ณ Word             ณ
+* WindMax     ณ Word             ณ
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Crt Unit Procedures and Functions
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Func/Proc     ณF or Pณ What it does
+ อออออออออออออออุออออออุออออออออออออออออออออออออออออออออออออออออออออออออออออ
+* AssignCrt     ณ Proc ณ Associates a text file with the CRT window.
+* ClrEol        ณ Proc ณ Clears all the characters from the cursor
+                ณ      ณ position to the end of the line.
+* ClrScr        ณ Proc ณ Clears the screen and returns the cursor to the
+                ณ      ณ upper left corner.
+* Delay         ณ Proc ณ Delays a specifed number of milliseconds.
+* DelLine       ณ Proc ณ Deletes the line containing the cursor.
+* GotoXY        ณ Proc ณ Moves the cursor to the given coordinates within
+                ณ      ณ the virtual screen.
+* HighVideo     ณ Proc ณ Selects high-intensity characters.
+* InsLine       ณ Proc ณ Inserts an empty line at the cursor position.
+* KeyPressed    ณ Func ณ Determines if a key has been pressed on the
+                ณ      ณ keyboard.
+* LowVideo      ณ Proc ณ Selects low-intensity characters.
+* NormVideo     ณ Proc ณ Selects the original text attribute read from
+                ณ      ณ the cursor location at startup.
+* NoSound       ณ Proc ณ Turns off the computer's internal speaker.
+* ReadKey       ณ Func ณ Reads a character from the keyboard.
+* Sound         ณ Proc ณ Starts the internal speaker.
+* TextBackgroundณ Proc ณ Selects the background color.
+* TextColor     ณ Proc ณ Selects the foreground character color.
+* TextMode      ณ Proc ณ Selects a specific text mode.
+* WhereX        ณ Func ณ Returns the X coordinate of the current cursor
+                ณ      ณ location.
+* WhereY        ณ Func ณ Returns the Y coordinate of the current cursor
+                ณ      ณ location.
+* Window        ณ Proc ณ Defines a text window on the screen.
+
+ีออออออออออธ
+ณ Dos Unit ณ
+ิออออออออออพ
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Variables (uninitialized)
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Variable    ณ Type             ณ Description
+ อออออออออออออุออออออออออออออออออุออออออออออออออออออออออออออออออออออออ
+* DosError    ณ Integer          ณ
+
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+Dos Unit Procedures and Functions
+ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ
+
+  Func/Proc     ณF or Pณ What it does
+ อออออออออออออออุออออออุออออออออออออออออออออออออออออออออออออออออออออออออออออ
+* DiskFree      ณ Func ณ Returns the number of free bytes of the specified 
+                ณ      ณ disk drive.
+* DiskSize      ณ Func ณ Returns the total size, in bytes, of specified disk
+                ณ      ณ drive.
+  DosExitCode   ณ Func ณ Returns the exit code of a subprocess.
+* DosVersion    ณ Func ณ Returns the DOS version number.
+  EnvCount      ณ Func ณ Returns the number of strings contained in the Dos
+                ณ      ณ environment.
+  EnvStr        ณ Func ณ Returns a specified environment string.
+  Exec          ณ Proc ณ Executes a specified program with a specified command
+                ณ      ณ line.
+  FExpand       ณ Func ณ Expands a file name into a fully-qualified file name.
+* FindFirst     ณ Proc ณ Searches the specified directory for the matching
+                ณ      ณ file.
+* FindNext      ณ Proc ณ Searches for another FindFirst file.
+  FSearch       ณ Func ณ Searches for a file.
+  FSplit        ณ Func ณ Splits a file name into its three components.
+* GetCBreak     ณ Proc ณ Returns the state of Ctrl-Break checking in DOS.
+* GetDate       ณ Proc ณ Returns the current date set in the operating system.
+  GetEnv        ณ Func ณ Returns the value of a specified environment variable.
+  GetFAttr      ณ Proc ณ Returns the attributes of a file.
+  GetFTime      ณ Proc ณ Returns the date and time a file was last written.
+  GetIntVec     ณ Proc ณ Returns the address stored in a specified interrupt
+                ณ      ณ vector.
+* GetTime       ณ Proc ณ Returns the current time set in the operating system.
+* GetVerify     ณ Proc ณ Returns the state of the verify flag in DOS.
+* Intr          ณ Proc ณ Executes a specified software interrupt.
+  Keep          ณ Proc ณ Keep (or Terminate Stay Resident) terminates the
+                ณ      ณ program and makes it stay in memory.
+* MsDos         ณ Proc ณ Executes a DOS function call.
+  PackTime      ณ Proc ณ Converts a TDateTime record.
+* SetCBreak     ณ Proc ณ Sets the state of Ctrl-Break checking in DOS.
+* SetDate       ณ Proc ณ Sets the current date in the operating system.
+  SetFAttr      ณ Proc ณ Sets the attributes of a file.
+  SetFTime      ณ Proc ณ Sets the date and time a file was last written.
+  SetIntVec     ณ Proc ณ Sets a specified interrupt vector to a specified
+                ณ      ณ address.
+* SetTime       ณ Proc ณ Sets the current time in the operating system.
+* SetVerify     ณ Proc ณ Sets the state of the verify flag in DOS.
+  SwapVectors   ณ Proc ณ Swaps the SaveIntXX pointers in the System unit with
+                ณ      ณ the current vectors.
+  UnpackTime    ณ Proc ณ Converts a Longint to a record.

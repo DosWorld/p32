@@ -1,0 +1,33 @@
+Pass32 32 bit assembler v2.1 or better
+.MODEL FLAT
+.DOSX WDOSX.DX
+.CODE
+.ORG 0
+
+.PUBLIC .DATA
+.PUBLIC .DATA?
+MAIN
+END
+PROC
+ENDP
+
+
+.ALIGN
+; !Not used! .INCLUDE
+ 
+byte ptr 
+word ptr 
+dword ptr 
+qword ptr 
+tbyte ptr 
+
+offset 
+DB
+DQ
+DB
+DUP(?)
+.EXTERN 
+;
+.PUBLIC
+st(#)
+
